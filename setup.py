@@ -19,7 +19,7 @@ setuptools.setup(
     py_modules=["tilly_sitemap"],
     install_requires=requirements,
     entry_points={
-        "tilly": ["sitemap = tilly_sitemap"],
+        "tilly": ["sitemap = tilly_sitemap.main"],
     },
     classifiers=[
         "Programming Language :: Python :: 3",
