@@ -1,6 +1,6 @@
 # tilly-sitemap
 
-Generate `robots.txt` and `sitemap.xml` for tilly sites.
+Generate `robots.txt` and `sitemap.xml` for [tilly](https://github.com/tilly-pub/tilly) sites.
 
 ## Example robots.txt
 
