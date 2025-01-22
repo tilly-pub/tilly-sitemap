@@ -8,7 +8,7 @@ with open('requirements.txt', 'r') as f:
 
 setuptools.setup(
     name="tilly-sitemap",
-    version="0.0.1",
+    version="0.0.2",
     author="Ronald Luitwieler",
     author_email="ronald.luitwieler@gmail.com",
     description="Tilly plugin creating a sitemap.xml",
