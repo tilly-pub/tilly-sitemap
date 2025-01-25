@@ -45,7 +45,7 @@ async def sitemap_xml():
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
 
-    paths = ["", "all/"]
+    paths = ["", "all"]
 
     # Add any configured using the SQL query
     db = ds.get_database()
@@ -69,10 +69,16 @@ async def sitemap_xml():
     for path in paths:
         path = path.replace('.md', '/')
         path = f"{base_url}/{path}"
+        path = add_trailing_slash(path)
         content.append(f"<url><loc>{path}</loc></url>")
     content.append("</urlset>")
     return content
 
+def add_trailing_slash(input_string):
+    print(input_string)
+    if not input_string.endswith('/'):
+        return input_string + '/'
+    return input_string
 
 def write_sitemap(sitemap):
     path = root / static_folder() / "sitemap.xml"
