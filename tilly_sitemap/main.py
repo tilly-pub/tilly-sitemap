@@ -41,7 +41,7 @@ async def sitemap_xml():
     base_url = os.environ.get('TILLY_BASE_URL')
 
     content = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<?xml version="1.0" encoding="utf-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
 
