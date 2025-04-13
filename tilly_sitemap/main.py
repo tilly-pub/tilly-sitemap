@@ -56,7 +56,7 @@ async def sitemap_xml():
     # Sitemap limit is 50,000
     limit = 50000 - len(paths)
     for row in await db.execute(f"""
-        SELECT DISTINCT topic as path FROM til
+        SELECT DISTINCT SUBSTR(topics, 1, INSTR(topics || ',', ',') - 1) as path FROM til
         UNION
         SELECT url as path FROM til
         LIMIT {limit}
